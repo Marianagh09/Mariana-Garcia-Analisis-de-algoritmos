@@ -57,4 +57,4 @@ def generar_inverso(n: int) -> list[int]:
     """
     # TODO: implemente el escenario C.
 
-    return list(range(n, 0, -1))  # Genera la lista en orden inverso 
+    return list(range(1, n + 1))  # Genera la lista en orden inverso 
