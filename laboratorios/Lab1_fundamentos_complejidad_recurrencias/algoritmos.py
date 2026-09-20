@@ -32,4 +32,4 @@ def insertion_sort(datos: list[int]) -> tuple[list[int], int]:
                 break  # Salir del bucle si no se necesita más comparaciones
 
         arr[j + 1] = clave  # Colocar la clave en su posición correcta
-        return arr, comparaciones  # Devolver la lista ordenada y el número de comparaciones
+    return arr, comparaciones  # Devolver la lista ordenada y el número de comparaciones
