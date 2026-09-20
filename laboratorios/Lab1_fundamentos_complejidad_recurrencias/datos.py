@@ -15,10 +15,10 @@ def generar_aleatorio(n: int, semilla: int = 42) -> list[int]:
         Lista de n indices de riesgo enteros distintos, desordenada.
     """
      # TODO: implemente el escenario A.
-    random.seed(semilla)
-    datos = list(range(1, n + 1))
-    random.shuffle(datos)
-    return datos
+    random.seed(semilla) # Establecer la semilla para reproducibilidad
+    datos = list(range(1, n + 1)) # Crear una lista de enteros del 1 al n
+    random.shuffle(datos) # Mezclar la lista para obtener un orden aleatorio
+    return datos # Devolver la lista desordenada
 
 def generar_casi_ordenado(n: int, semilla: int = 42) -> list[int]:
 
@@ -42,7 +42,7 @@ def generar_casi_ordenado(n: int, semilla: int = 42) -> list[int]:
     parte_desordenada = list(range(n_desordenado, 0, -1))  # Genera la parte desordenada en orden descendente
     random.shuffle(parte_desordenada)  # Mezcla la parte desordenada
 
-    return parte_ordenada + parte_desordenada 
+    return parte_ordenada + parte_desordenada  # Devuelve la lista combinada, con la parte ordenada primero y la parte desordenada al final
 
 def generar_inverso(n: int) -> list[int]:
 
@@ -58,5 +58,3 @@ def generar_inverso(n: int) -> list[int]:
     # TODO: implemente el escenario C.
 
     return list(range(n, 0, -1))  # Genera la lista en orden inverso 
-   
-
