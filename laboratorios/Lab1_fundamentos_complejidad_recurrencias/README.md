@@ -52,3 +52,28 @@ Cuando el proceso de analisis y ordenamiento no termina antes de las 6 a.m. ento
   En este caso, el ordenamiento de la lista no es un proceso meramente tecnico o que se haga porque si, funciona mas bien como un tipo de triaje medico que decide cual es la persona que debe ser atendida primero. 
 
   Por lo que se exige garantizar que el **algoritmo sea completamente correcto**. Si el sistema llega a fallar o sirve a medias, se altera el orden de prioridad, haciendo que el acceso a la atencion medica dependa mas del funcionamiento o fallos del software que de la urgencia de salud del paciente.
+
+
+## Parte 3 - Peor caso, mejor caso y caso promedio en Insertion Sort
+
+### 3.1 
+### Definicion teorica de los casos
+
+1. **Peor caso:** Es el escenario donde el algoritmo más sufre y hace la mayor cantidad de trabajo.
+   * **¿Sobre qué se mide?:** Buscamos el **costo máximo** dentro de todo el grupo de entradas posibles que miden exactamente *n*. Nos da el "techo" o límite superior de tiempo que el algoritmo jamás va a superar para ese tamaño.
+2. **Mejor caso :** Es el escenario ideal donde los datos vienen tan acomodados que el algoritmo termina lo más rápido posible.
+   * **¿Sobre qué se mide?:** Buscamos el **costo mínimo** entre todas las entradas posibles que miden exactamente *n*. Nos muestra lo más rápido que puede llegar a correr si el orden inicial lo favorece al máximo.
+3. **Caso promedio:** Es lo que esperamos que pase en un día normal de operación con datos reales o desordenados al azar.
+   * **¿Sobre qué se mide?:** Se calcula sacando un **promedio ponderado** sobre todas las entradas de tamaño *n*, teniendo en cuenta qué tan probable es que nos llegue cada tipo de datos en la práctica. 
+
+### Criterio de decision en produccion
+
+Para definir si este algoritmo sirve para **Tamiza** dentro de las 4 horas necesarias, pues debemos basarnos si o si en el **peor caso** porque si nos confiamos y asumimos que siempre sera el caso promedio, el dia que los datos lleguen atipicamente invertidos, haria que el tiempo de produccion sobrepase las 4 horas, provocando que el proceso vuelva a colapsar. 
+
+### Prediccion teorica para los escenarios 
+
+Dado que muestroalgoritmo ordena de **mayor a menor** 
+* **Prediccion del peor caso:** Escenario C (*Inverso*) porque en el caso completamente inverso, debe comparar elemento por elemento, reacomodando a cada uno en su ubicacion contraria, entonces para hacer la comparacion e insercion de cada elemento, es el caso que mas tiempo toma.
+* **Prediccion del mejor caso:** Escenario B (*Casi ordenado*) porque aunque deba seguir lacomparacion de todos los elementos, pues la mayoria ya estan en su ubicacion excata, entonces demora menos tiempo, por ejemplo en este caso, solo el 2% de los elementos estan en un orden aleatorio, lo que hace que demore menos tiempo en ejecucion.
+* **Prediccion caso promedio:** Escenario A (*Aleatorio*) porque demora la mitad de tiempo que el peor caso, porque como esta aleatoria pero no inversa, entonces encuentra su ubicacion correcta en la mitad del camino, por lo que demora la mitad del tiempo.
+
