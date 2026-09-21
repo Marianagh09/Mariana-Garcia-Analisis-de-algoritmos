@@ -86,3 +86,13 @@ A continuación se presentan las gráficas obtenidas tras ejecutar los experimen
 
 #### Tiempo de Ejecución vs. Tamaño de Entrada ($n$)
 ![Tiempo de Ejecución de Insertion Sort](graficas/parte3_tiempos.png)
+
+* **Peor Caso $\rightarrow$ Escenario C (Inverso - Línea Verde):** Curva parabólica ascendente con el crecimiento más pronunciado. En $n = 6400$, llegó a aproximadamente $2.0 \times 10^7$ comparaciones y cerca de 8 segundos de ejecución.
+* **Mejor Caso $\rightarrow$ Escenario B (Casi Ordenado - Línea Naranja):** Curva completamente plana sobre el eje horizontal, registrando un número de comparaciones que escala de manera lineal y tiempos de ejecución prácticamente instantáneos (cercanos a 0 segundos).
+* **Caso Promedio $\rightarrow$ Escenario A (Aleatorio - Línea Azul):** Curva cuadrática intermedia que crece con una pendiente proporcional a la mitad del peor caso (alrededor de $1.0 \times 10^7$ comparaciones en $n = 6400$). 
+
+**Análisis de la coincidencia:**
+Los resultados experimentales coinciden al 100% con la predicción inicial. Como el algoritmo ordena de **mayor a menor**:
+1. Entregarle los datos ordenados en sentido contrario (ascendente, 1 a $n$) obligó a desplazar cada nuevo número a lo largo de todo el subarreglo ordenado antes de insertarlo, desencadenando el peor comportamiento posible $O(n^2)$.
+2. Entregarle un vector preordenado casi al 98% de mayor a menor permitió que el bucle interno rompiera la condición en la primera evaluación la gran mayoría de las veces, confirmando la complejidad $O(n)$.
+3. El escenario aleatorio requirió en promedio desplazar los elementos hasta la mitad de la secuencia ordenada, generando la mitad exacta del costo del peor caso.
