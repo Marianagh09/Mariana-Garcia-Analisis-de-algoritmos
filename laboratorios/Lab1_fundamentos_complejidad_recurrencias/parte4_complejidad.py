@@ -52,7 +52,7 @@ def realizar_experimento_parte4():
     plt.tight_layout() # Ajustar el diseño para que no se corten elementos
     plt.savefig("graficas/parte4_comparaciones.png") # Guardar el gráfico como imagen
 
-    print("Experimento completado. Gráficas guardadas en la carpeta 'graficas'.")
+print("Experimento completado. Gráficas guardadas en la carpeta 'graficas'.")
 
-    if __name__ == "__main__":
-        realizar_experimento_parte4() # Ejecutar el experimento si se ejecuta este archivo directamente 
+if __name__ == "__main__":
+    realizar_experimento_parte4() # Ejecutar el experimento si se ejecuta este archivo directamente 
