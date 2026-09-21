@@ -77,3 +77,12 @@ Dado que muestroalgoritmo ordena de **mayor a menor**
 * **Prediccion del mejor caso:** Escenario B (*Casi ordenado*) porque aunque deba seguir lacomparacion de todos los elementos, pues la mayoria ya estan en su ubicacion excata, entonces demora menos tiempo, por ejemplo en este caso, solo el 2% de los elementos estan en un orden aleatorio, lo que hace que demore menos tiempo en ejecucion.
 * **Prediccion caso promedio:** Escenario A (*Aleatorio*) porque demora la mitad de tiempo que el peor caso, porque como esta aleatoria pero no inversa, entonces encuentra su ubicacion correcta en la mitad del camino, por lo que demora la mitad del tiempo.
 
+### Graficas y comparaciones
+
+A continuación se presentan las gráficas obtenidas tras ejecutar los experimentos evaluando los tres escenarios sobre los tamaños $n \in \{100, 200, 400, 800, 1600, 3200, 6400\}$:
+
+#### Comparaciones vs. Tamaño de Entrada ($n$)
+![Comparaciones de Insertion Sort](graficas/parte3_comparaciones.png)
+
+#### Tiempo de Ejecución vs. Tamaño de Entrada ($n$)
+![Tiempo de Ejecución de Insertion Sort](graficas/parte3_tiempos.png)
