@@ -44,7 +44,7 @@
 **Lo que puede mejorar:**
 - `merge_sort` no tiene el *docstring* pedido y varias funciones internas y `parte3_casos.py`/`parte4_complejidad.py` tampoco tienen docstring ni *type hints*.
 - Quedaron comentarios `TODO` de la guía en el código.
-- Hay muchas líneas largas, espacios sobrantes y falta de líneas en blanco entre funciones (estilo PEP 8).
+- Hay muchas líneas largas y falta de líneas en blanco entre funciones (estilo PEP 8).
 - En `datos.py`, la línea de `import` quedó antes del docstring del módulo.
 
 ## 4. Calidad del análisis de las gráficas (13 / 20)
