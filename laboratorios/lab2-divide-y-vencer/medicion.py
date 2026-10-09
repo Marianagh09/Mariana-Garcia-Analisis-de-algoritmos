@@ -13,8 +13,8 @@ def ejecutar_experimento() -> None:
     # Tamaños de entrada indicados (dos < 100 y uno >= 4000)
     tamanios = [10, 50, 100, 500, 1000, 4000, 8000]
 
-    tiempos_fb = []  
-    tiempos_dv = [] 
+    tiempos_fb, tiempos_dv = [], []  
+   
 
     #Fijar semilla para garantizar reproducibilidad
     random.seed(42)
@@ -67,4 +67,7 @@ def ejecutar_experimento() -> None:
 
 if __name__ == "__main__":
     ejecutar_experimento()
+
+
+
     
