@@ -62,11 +62,25 @@ Las mediciones se registraron utilizando la función de alta precisión `time.pe
 **Tabla de datos medidos — Experimento A (Lista frente a Tabla Hash)**
 Para cada tamaño $n$, la tabla utilizó un número primo $m \approx n / 2$, manteniendo un factor de carga cercano a $\alpha \approx 2$:
 
-| Guías almacenadas ($n$) | Casillas ($m$) | Factor de Carga Real ($\\alpha$) | Tiempo Lista ($\\mu s$) | Tiempo Tabla ($\\mu s$) | | :---: | :---: | :---: | :---: | :---: | | $100$ | $53$ | $1,89$ | $12,06$ | $0,58$ | | $500$ | $251$ | $1,99$ | $81,89$ | $0,30$ | | $1.000$ | $503$ | $1,99$ | $122,04$ | $0,60$ | | $5.000$ | $2.503$ | $2,00$ | $340,08$ | $1,26$ | | $20.000$ | $10.007$ | $2,00$ | $1.488,38$ | $0,53$ | | $50.000$ | $25.013$ | $2,00$ | $4.419,42$ | $0,68$ |
+| Guías almacenadas ($n$) | Casillas ($m$) | Factor de Carga Real ($\\alpha$) | Tiempo Lista ($\\mu s$) | Tiempo Tabla ($\\mu s$) | 
+| :---: | :---: | :---: | :---: | :---: | 
+| $100$ | $53$ | $1,89$ | $12,06$ | $0,58$ | 
+| $500$ | $251$ | $1,99$ | $81,89$ | $0,30$ | 
+| $1.000$ | $503$ | $1,99$ | $122,04$ | $0,60$ | 
+| $5.000$ | $2.503$ | $2,00$ | $340,08$ | $1,26$ | 
+| $20.000$ | $10.007$ | $2,00$ | $1.488,38$ | $0,53$ | 
+| $50.000$ | $25.013$ | $2,00$ | $4.419,42$ | $0,68$ |
 
 **Tabla de datos medidos — Experimento B (Efecto de $\alpha$ con $n = 20.000$ fijo)**
 
-| Factor Carga Objetivo ($\\alpha$) | Casillas ($m$) | Factor Carga Real ($\\alpha$) | Tiempo Medio Tabla ($\\mu s$) | | :---: | :---: | :---: | :---: | | $0,25$ | $80.021$ | $0,25$ | $5.836,17$ | | $0,50$ | $40.009$ | $0,50$ | $6.036,56$ | | $1,00$ | $20.011$ | $1,00$ | $6.201,95$ | | $2,00$ | $10.007$ | $2,00$ | $6.893,00$ | | $4,00$ | $5.003$ | $4,00$ | $7.048,39$ | | $10,00$ | $2.003$ | $9,99$ | $7.153,42$ |
+| Factor Carga Objetivo ($\\alpha$) | Casillas ($m$) | Factor Carga Real ($\\alpha$) | Tiempo Medio Tabla ($\\mu s$) | 
+| :---: | :---: | :---: | :---: | 
+| $0,25$ | $80.021$ | $0,25$ | $5.836,17$ | 
+| $0,50$ | $40.009$ | $0,50$ | $6.036,56$ | 
+| $1,00$ | $20.011$ | $1,00$ | $6.201,95$ | 
+| $2,00$ | $10.007$ | $2,00$ | $6.893,00$ | 
+| $4,00$ | $5.003$ | $4,00$ | $7.048,39$ | 
+| $10,00$ | $2.003$ | $9,99$ | $7.153,42$ |
 
 ### Gráficas de comportamiento empírico 
 #### Gráfica 1: Tiempo Medio de Búsqueda Infructuosa frente a $n$ 
