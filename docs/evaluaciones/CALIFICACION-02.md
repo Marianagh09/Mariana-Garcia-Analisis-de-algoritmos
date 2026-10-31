@@ -64,7 +64,7 @@
 - Se publicaron `.gitignore.txt` y un `main.py` suelto; conviene usar un solo `.gitignore`.
 
 ## ¿El código funciona?
-Sí. Las pruebas pasan, las dos funciones coinciden en listas aleatorias que probé por mi cuenta, y `medicion.py` corre y genera la gráfica.
+Sí. Las pruebas pasan, las dos funciones coinciden en listas aleatorias, y `medicion.py` corre y genera la gráfica.
 
 ## Para el próximo laboratorio
 - Compare las sumas (no los índices) en las pruebas y en la verificación del experimento.
